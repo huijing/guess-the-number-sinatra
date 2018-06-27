@@ -1,69 +1,56 @@
 # Guess The Number web edition
 Different versions of the Guess The Number game for TechLadies pre-bootcamp workshop #2
 
-Guess the Number is a basic ruby application built on top of Sinatra for the purposes of TechLadies pre-bootcamp workshop #2, which covers the basics of the web, HTML and CSS. We will also cover some basic Git concepts and how to deploy the app onto Heroku. Given that everyone may be using different machines with different operating systems, we will be using Cloud9 as our development environment.
+Guess the Number is a basic ruby application built on top of Sinatra for the purposes of TechLadies pre-bootcamp workshop #2, which covers the basics of the web, HTML and CSS. We will also cover some basic Git concepts and how to deploy the app onto Heroku. Given that everyone may be using different machines with different operating systems, we will be using CodeAnywhere as our development environment.
 
 ## Resources used
-- [GitHub](https://github.com)
-- [Nitrous](https://www.nitrous.io/)
-- [Heroku](https://www.heroku.com)
+- [GitHub](https://github.com) (for version control)
+- [CodeAnywhere](https://codeanywhere.com/) (an online editor)
+- [Heroku](https://www.heroku.com) (for deploying your application)
 
 ## Getting set up
 
 ### On GitHub
+
 1. Sign up for a GitHub account.
 2. Go to the [Guess The Number project repository](https://github.com/TechLadies/guess-the-number-sinatra) and fork it by clicking the Fork button in the top right corner (ask for help if you can't find it).
-3. Leave this window open as you will need to perform further set up actions to integrate smoothly with Nitrous or Cloud9.
+3. Leave this window open as you will need to perform further set up actions to integrate smoothly with Codeanywhere.
 
-### Setting up SSH between Github and Cloud9
-3. Sign up for a Cloud9 account by clicking on the GitHub icon in the top right corner. You will need to authorize Cloud9 to use your Github account.
-4. Once it's done, you will be at the Dashboard page.
-5. Go to `https://c9.io/account/ssh` to access your SSH Settings page.
-7. Open another window and go to `https://github.com/settings/keys` to access your SSH and GPG keys on Github.
-8. Click on the green New SSH key button in the top right corner.
-9. Enter "Cloud9 IDE" in the Title field.
-10. Switch back to the SSH Settings page in the previous window and copy everything in the grey box. Paste the contents in the Key field on your SSH and GPG keys page on Github.
-11. Click on the green Add SSH key button.
+### On Codeanywhere
 
-### On Cloud9
-4. Click on Create New Workspace.
-5. Enter a name for your workspace and a brief description.
-5. Fill in `git@github.com:<YOUR_USER_NAME>/guess-the-number-sinatra.git` in the field Clone from Git or Mercurial URL (optional). This is the repository that you forked to your own account in the earlier steps.
-6. Select Ruby for the Choose a template option.
-7. Click on the green Create Workspace button to proceed.
-8. You should see a loading window, and this may take a while, so keep the window open and let it run.
-9. When things are set up, you should see your workspace, with a file manager in the left column, a text editor taking up most of the space in the main right area and a smaller terminal in the bottom of the right area.
-10. In the terminal, enter `bundle install` and press enter.
-10. To run the app, enter `ruby app.rb -p $PORT -o $IP` in the terminal and press enter.
+1. Sign up for a Codeanywhere account by clicking on the *Sign up* in the top right corner.
+2. Fill in an email address and password, resolve the CAPTCHA checkbox and click on *Register*.
+3. You will see a welcome message informing you your account has been created successfully.
+4. Check the email with which you used to sign up for GitHub. You should receive an email from *Codeanywhere Team* that asks you to verify your account. Please do so (check your spam folder if you cannot find this email).
+5. After clicking the verify link in the email, it should lead you to a page that says you have successfully verified your account. Click the link to take you to the editor at the bottom of the message.
+6. You will see a *Connection Wizard*.
+7. Select the *GitHub* (second option on the sidebar), click on *Connect your GitHub Account* in the middle of the window.
+8. Depending on the browser you are using, you may or may not see a pop-up. If your browser has blocked the pop-up, please allow pop-ups for `codeanywhere.com`.
+9. Authorise Codeanywhere to access your GitHub account by clicking the green *Authorize codeanywhere* button.
+10. You will be redirected back to Codeanywhere and you should be able to see the *guess-the-number-sinatra* repository in the window. Select it and the ruby icon will turn red. Click the tiny *Next* button in the bottom-right of the window.
+11. You will see a message called *Create Container*, it will run for a few minutes before closing itself.
+12. When all is done, you should be able to see a list of files in the left sidebar. And you're all set up.
 
-### On Nitrous
-3. Sign up for a Nitrous account by clicking on the Sign Up button in the top right corner. It will take some time for your account to be set up.
-4. Once it's done, click on your profile image in top right corner and select Account Settings.
-5. Connect your account GitHub, and fill in the Name and Email field under Git Config on the Account Settings page. Remember to click on Save Changes.
-6. Click on the Dashboard link in the top left corner to return to the Dashboard, then click on the Plus icon to create a new project.
-7. Name your project, and choose the Ruby template, then click the Create Project button. This will take some time to complete.
-8. Once it's done, click on Open IDE.
+### On previewing your application
 
-### On integrating with GitHub
-4. Click on Git in the toolbar and select Clone from GitHub. Select guess-the-number-sinatra and click Clone.
-5. When the terminal prompt asks "Are you sure you want to continue connecting (yes/no)?", type "yes" and press enter.
-    ![](https://www.chenhuijing.com/filerepo/tl-ws2-terminal.png)
-6. Your files should now appear under nitrous > code > guess-the-number-sinatra in the left sidebar.
-
-### On running the development server
-1. Run `bundle install` to install the required ruby dependencies.
-    ![](https://www.chenhuijing.com/filerepo/tl-ws2-terminal2.png)
-2. Start the server by running `bundle exec ruby ./app.rb`
-3. You should see something like this in the terminal
+1. On the left sidebar, right-click *guess-the-number-sinatra* and select the second option: *SSH Terminal*.
+2. Run `bundle install` to install the required ruby dependencies.
+    ![](https://www.chenhuijing.com/filerepo/tl-pen-terminal.png)
+3. Then run `ruby app.rb -p 3000 -o 0.0.0.0`
+4. You should see something like this in the terminal
 ```
-[2016-08-11 16:31:24] INFO  WEBrick 1.3.1
-[2016-08-11 16:31:24] INFO  ruby 2.3.1 (2016-04-26) [x86_64-linux]
+[2018-06-26 22:32:35] INFO  WEBrick 1.3.1
+[2018-06-26 22:32:35] INFO  ruby 2.1.2 (2014-05-08) [x86_64-linux]
 == Sinatra (v1.4.7) has taken the stage on 3000 for development with backup from WEBrick
-[2016-08-11 16:31:24] INFO  WEBrick::HTTPServer#start: pid=683 port=3000
+[2018-06-26 22:32:35] INFO  WEBrick::HTTPServer#start: pid=1383 port=3000
 ```
-4. Click on Preview in the toolbar and select `Port 3000 - HTTP`. This should launch a separate window with the app running.
+5. Right-click *guess-the-number-sinatra* on the left sidebar again, and click on *Info* (should be the 6th option down the list).
+6. Scroll down until you see the line *To access an application running on your Container use the following link (ports 1024-9999 available)*.
+7. Copy the link into a new browser window and add `:3000` at the end of the URL without any spaces (please ask the assistant coaches for help if you can't get this to work). It should look like this: `http://guess-the-number-sinatra-huijing.codeanyapp.com:3000`
+8. You should be able to see the Guess The Number app, and any changes you make to your code will be reflected when you refresh the page.
 
 ### On Heroku
+
 1. Sign up for a Heroku account by clicking Sign Up in the top right corner.
 2. After verifying your email and setting your password, proceed to the dashboard.
 3. Click on the New button on the top right, click Create New App button, leave the defaults and click Create App.
