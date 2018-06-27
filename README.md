@@ -35,7 +35,7 @@ Guess the Number is a basic ruby application built on top of Sinatra for the pur
 
 1. On the left sidebar, right-click *guess-the-number-sinatra* and select the second option: *SSH Terminal*.
 2. Run `bundle install` to install the required ruby dependencies.
-    ![](https://www.chenhuijing.com/filerepo/tl-pen-terminal.png)
+    ![](https://www.chenhuijing.com/filerepo/tl-pen-terminal.jpg)
 3. Then run `ruby app.rb -p 3000 -o 0.0.0.0`
 4. You should see something like this in the terminal
 ```
